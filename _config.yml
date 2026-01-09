@@ -6,7 +6,7 @@ baseurl: ""
 
 permalink: /:categories/:year/:month/:day/:title/
 
-url: "https://naftiko.github.io/capabilities-podcast/"
+url: "https://naftiko.io/resources"
 
 logo: https://kinlane-productions2.s3.us-east-1.amazonaws.com/naftiko-capabilities-podcast/naftiko-logo-blue.png
 

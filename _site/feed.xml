@@ -1,48 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <channel>
-    <title>Nafitko Capabilities</title>
-    <description><![CDATA[The Naftiko Capabilities podcast is a twice weekly show about being capable of doing what we need across the digital landscape, inviting domain experts to talk about how they are integrating and automating across internal and 3rd-party systems as part of any aspect of enterprise operations today.]]></description>
-    <link>http://localhost:4000</link>
-    <lastBuildDate>Mon, 05 Jan 2026 19:41:56 -0500</lastBuildDate>
-    <pubDate>Mon, 05 Jan 2026 19:41:56 -0500</pubDate>
-    <ttl>120</ttl>
-    <language>en</language>
-    <copyright><![CDATA[]]></copyright>
-    <docs>http://localhost:4000</docs>
-    <image>
-      <url>https://kinlane-productions2.s3.amazonaws.com/api-evangelist-logos/api-evangelist-logo-butterfly.png</url>
-      <title>Nafitko Capabilities</title>
-      <link>http://localhost:4000</link>
-    </image>
-    <itunes:image href="https://kinlane-productions2.s3.amazonaws.com/api-evangelist-logos/api-evangelist-logo-butterfly.png" />
-    <itunes:subtitle><![CDATA[]]></itunes:subtitle>
-    <itunes:author>Kin Lane</itunes:author>
-    <itunes:summary><![CDATA[The Naftiko Capabilities podcast is a twice weekly show about being capable of doing what we need across the digital landscape, inviting domain experts to talk about how they are integrating and automating across internal and 3rd-party systems as part of any aspect of enterprise operations today.]]></itunes:summary>
-    <atom:link rel="self" type="application/rss+xml" href="http://localhost:4000/feed.xml" />
-    <itunes:owner>
-      <itunes:name><![CDATA[Kin Lane]]></itunes:name>
-      <itunes:email></itunes:email>
-    </itunes:owner>
-    <itunes:explicit>no</itunes:explicit>
-    <itunes:keywords></itunes:keywords>
-    <itunes:category text="Technology">
-    </itunes:category>
-    <media:credit role="author">Kin Lane</media:credit>
-    <media:description type="html"><![CDATA[The Naftiko Capabilities podcast is a twice weekly show about being capable of doing what we need across the digital landscape, inviting domain experts to talk about how they are integrating and automating across internal and 3rd-party systems as part of any aspect of enterprise operations today.]]></media:description>
-    
-    <item>
-      <title>Naftiko Capabilities Podcast for January 5th, 2026 - What is a capability?</title>
-      <itunes:subtitle><![CDATA[]]></itunes:subtitle>
-      <guid isPermaLink="false">https://kinlane-productions2.s3.us-east-1.amazonaws.com/naftiko-capabilities-podcast/naftiko-capabilities-2025-01-06.wav</guid>
-      <pubDate>Tue, 06 Jan 2026 09:00:00 -0500</pubDate>
-      <itunes:duration>0:19:05</itunes:duration>
-      <itunes:keywords></itunes:keywords>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="http://localhost:4000/"/>
-      <description><![CDATA[This is the Naftiko Capabilities podcast for January 6th, 2026, where we sit down with Mike Amundsen and Christian Posta to ask, &quot;What is a Capability?&quot; Mike brings a rich understanding of the web, hypermedia, and semantics, while Christian dives into the technical details from the artificial intelligence perspective, MCP, and the gateway view of capabilities. This discussion is helping inform what we are building at Naftiko when it comes to capability-centered integrations and automation, kicking off a new podcast series focused on aligning engineering and business with capabilities thinking that helps us all get down to business when it comes to enterprise integrations.]]></description>
-        <link>http://localhost:4000/</link>
-        <enclosure url="https://kinlane-productions2.s3.us-east-1.amazonaws.com/naftiko-capabilities-podcast/naftiko-capabilities-2025-01-06.wav" length="201889844" type="audio/mp4"/>
-      </item>
-    </channel>
-  </rss>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+	<channel>
+		<title>Nafitko Latest</title>
+		<description>This is a repository for providing the RSS feed for the Naftiko latest resources feed, curating the latest blog, podcasts, press releases, repositories, and other useful work coming out of Naftiko. - </description>		
+		<sy:updatePeriod>daily</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+		<link>http://localhost:4000</link>
+		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+		<lastBuildDate></lastBuildDate>
+		
+		
+			<item>
+				<title>Our Partners and Customers Need an AI Copilot</title>
+				
+					<dc:creator>Kin Lane</dc:creator>
+				
+				<description>
+</description>
+				<pubDate>Sun, 04 Jan 2026 19:00:00 -0500</pubDate>
+				<link>http://localhost:4000/store/our-partners-and-customers-need-an-ai-copilot/</link>
+				<guid isPermaLink="true">http://localhost:4000/store/our-partners-and-customers-need-an-ai-copilot/</guid>
+			</item>
+		
+			<item>
+				<title>Welcome to the Naftiko Capabilities Podcast</title>
+				
+					<dc:creator>Kin Lane</dc:creator>
+				
+				<description>
+</description>
+				<pubDate>Mon, 05 Jan 2026 19:00:00 -0500</pubDate>
+				<link>http://localhost:4000/store/welcome-to-the-naftiko-capabilities-podcast/</link>
+				<guid isPermaLink="true">http://localhost:4000/store/welcome-to-the-naftiko-capabilities-podcast/</guid>
+			</item>
+		
+			<item>
+				<title>Introducing Naftiko Signals -- Gathering the Signals That Matter Across the Enterprise</title>
+				
+					<dc:creator>Kin Lane</dc:creator>
+				
+				<description>
+</description>
+				<pubDate>Tue, 06 Jan 2026 19:00:00 -0500</pubDate>
+				<link>http://localhost:4000/store/introducing-naftik-signals-gathering-the-signals-that-matter-across-the-enterprise/</link>
+				<guid isPermaLink="true">http://localhost:4000/store/introducing-naftik-signals-gathering-the-signals-that-matter-across-the-enterprise/</guid>
+			</item>
+		
+	</channel>
+</rss>
