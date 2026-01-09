@@ -4,7 +4,6 @@ lang: en
 
 baseurl: ""
 
-# Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title/
 
 url: "https://naftiko.github.io/capabilities-podcast/"
