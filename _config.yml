@@ -1,0 +1,53 @@
+title: Nafitko Ltest
+description: This is a repository for providing the RSS feed for the Naftiko latest resources feed, curating the latest across different sources, providing a refined list of what matters when it comes to the Nafitko platform.
+lang: en
+
+baseurl: ""
+
+# Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
+permalink: /:categories/:year/:month/:day/:title/
+
+url: "https://naftiko.github.io/capabilities-podcast/"
+
+logo: https://kinlane-productions2.s3.us-east-1.amazonaws.com/naftiko-capabilities-podcast/naftiko-logo-blue.png
+
+navbar:
+    sticky:         true
+    search:         true
+  
+author:
+    name:           Kin Lane
+    title:          Naftiko
+    avatar:         https://kinlane-productions2.s3.amazonaws.com/kin-lane/kin-lane-cartoon-questioning.png
+
+authors:
+    kin:
+      name:         Kin Lane
+      title:        API Evangelist
+      avatar:       https://kinlane-productions2.s3.us-east-1.amazonaws.com/naftiko-capabilities-podcast/naftiko-logo-blue.png
+      email:       'kinlane@postman.com'
+      affiliation: 'API Evangelist'
+      github:      'kinlane'
+      linkedin:    'in/kinlane'        
+
+footer:
+    copyright:      Naftiko
+
+# Path to post content assets directory i.e post images, pdfs etc
+uploads:            /uploads/
+
+# Build settings
+markdown:           kramdown
+highlighter:        rouge
+  
+sass:
+  style: compressed
+
+collections:
+  store:
+    output:         false
+
+defaults:
+  - scope:
+      path:         ""
+      type:         store
