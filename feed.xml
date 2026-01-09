@@ -1,51 +1,35 @@
 ---
-layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://web.resource.org/cc/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <channel>
-    <title>{{ site.title }}</title>
-    <description><![CDATA[{{ site.description | xml_escape }}]]></description>
-    <link>{{ site.url }}</link>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <ttl>120</ttl>
-    <language>en</language>
-    <copyright><![CDATA[]]></copyright>
-    <docs>{{ site.url }}</docs>
-    <image>
-      <url>{{ site.logo }}</url>
-      <title>{{ site.title }}</title>
-      <link>{{ site.url }}</link>
-    </image>
-    <itunes:image href="{{ site.logo }}" />
-    <itunes:subtitle><![CDATA[{{ site.subtitle }}]]></itunes:subtitle>
-    <itunes:author>{{ site.author.name }}</itunes:author>
-    <itunes:summary><![CDATA[{{ site.description | xml_escape }}]]></itunes:summary>
-    <atom:link rel="self" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-    <itunes:owner>
-      <itunes:name><![CDATA[{{ site.author.name }}]]></itunes:name>
-      <itunes:email>{{ site.author.email }}</itunes:email>
-    </itunes:owner>
-    <itunes:explicit>no</itunes:explicit>
-    <itunes:keywords></itunes:keywords>
-    <itunes:category text="Technology">
-    </itunes:category>
-    <media:credit role="author">{{ site.author.name }}</media:credit>
-    <media:description type="html"><![CDATA[{{ site.description | xml_escape }}]]></media:description>
-    {% assign sessions = site.store | sort: "publish_date" | reverse | limit: 250 %}
-    {% for podcast in sessions %}<item>
-      <title>{{ podcast.title | xml_escape }}</title>
-      <itunes:subtitle><![CDATA[{{ podcast.subtitle | xml_escape }}]]></itunes:subtitle>
-      <guid isPermaLink="false">{{ podcast.audio_file }}</guid>
-      <pubDate>{{ podcast.publish_date | date_to_rfc822 }}</pubDate>
-      <itunes:duration>{{ podcast.duration }}</itunes:duration>
-      <itunes:keywords></itunes:keywords>
-      <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="{{ site.url }}/{{ podcast.image }}"/>
-      <description><![CDATA[{{ podcast.description | xml_escape }}]]></description>
-        <link>{{ site.url }}/{{ podcasturl }}</link>
-        <enclosure url="{{ podcast.audio_file }}" length="{{ podcast.audio_length }}" type="audio/mp4"/>
-      </item>{% endfor %}
-    </channel>
-  </rss>
+<rss version="2.0"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+>
+	<channel>
+		<title>{{ site.name | xml_escape }}</title>
+		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
+		<sy:updatePeriod>{{ site.feed_update_period | default: "daily" | xml_escape }}</sy:updatePeriod>
+		<sy:updateFrequency>{{ site.feed_update_frequency | default: 1 | xml_escape }}</sy:updateFrequency>
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/{{ page.path }}" rel="self" type="application/rss+xml" />
+		<lastBuildDate>{% for post in site.posts limit:1 %}{{ post.date | date_to_rfc822 }}{% endfor %}</lastBuildDate>
+		{% assign feed_items = site.feed_items | default: 10 %}
+		{% for post in site.posts limit:feed_items %}
+			<item>
+				<title>{{ post.title | xml_escape }}</title>
+				{% if post.author.name %}
+					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
+				{% endif %}
+				{% if post.excerpt %}
+					<description>{{ post.excerpt | xml_escape }}</description>
+				{% else %}
+					<description>{{ post.content | xml_escape }}</description>
+				{% endif %}
+				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+				<link>{{ site.url }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
