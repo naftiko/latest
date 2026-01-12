@@ -23,7 +23,7 @@
 				{% endif %}
 				<description>{{ post.content | xml_escape }}</description>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ site.url }}{{ post.url }}</link>
+				<link>{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
 		{% endfor %}
